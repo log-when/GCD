@@ -1,0 +1,99 @@
+DecoupledGcdProp1
+input reset : bv<1>
+input input_valid : bv<1>
+input input_bits_value1 : bv<4>
+input input_bits_value2 : bv<4>
+input output_ready : bv<1>
+input _GEN_4_invalid : bv<4>
+input _GEN_5_invalid : bv<4>
+input _GEN_6_invalid : bv<4>
+input _GEN_17_invalid : bv<4>
+input _GEN_18_invalid : bv<4>
+input _GEN_19_invalid : bv<4>
+node _input_ready_T : bv<1> = not(busy)
+node _T : bv<1> = ugeq(x, y)
+node _x_T : bv<5> = sub(zext(x, 1), zext(y, 1))
+node _x_T_1 : bv<4> = _x_T[3:0]
+node _y_T : bv<5> = sub(zext(y, 1), zext(x, 1))
+node _y_T_1 : bv<4> = _y_T[3:0]
+node _GEN_0 : bv<4> = ite(_T, _x_T_1, x)
+node _GEN_1 : bv<4> = ite(_T, y, _y_T_1)
+node _T_1 : bv<1> = eq(x, zext(1'b0, 3))
+node _T_2 : bv<1> = eq(y, zext(1'b0, 3))
+node _T_3 : bv<1> = or(_T_1, _T_2)
+node _T_4 : bv<1> = eq(x, zext(1'b0, 3))
+node _GEN_2 : bv<4> = ite(_T_1, y, x)
+node _GEN_3 : bv<1> = ite(resultValid, 1'b0, 1'b1)
+output _GEN_4_invalid.en : bv<1> = not(_T_3)
+node _GEN_4 : bv<4> = ite(not(_T_3), _GEN_4_invalid, _GEN_2)
+output _GEN_5_invalid.en : bv<1> = not(_T_3)
+node _GEN_5 : bv<4> = ite(not(_T_3), _GEN_5_invalid, xInitial)
+output _GEN_6_invalid.en : bv<1> = not(_T_3)
+node _GEN_6 : bv<4> = ite(not(_T_3), _GEN_6_invalid, yInitial)
+node _GEN_7 : bv<1> = ite(_T_3, _GEN_3, resultValid)
+node _GEN_8 : bv<1> = ite(_T_3, 1'b0, busy)
+node _GEN_9 : bv<1> = or(input_valid, _input_ready_T)
+node _GEN_10 : bv<4> = ite(input_valid, input_bits_value1, x)
+node _GEN_11 : bv<4> = ite(input_valid, input_bits_value2, y)
+node _GEN_12 : bv<4> = ite(input_valid, input_bits_value1, xInitial)
+node _GEN_13 : bv<4> = ite(input_valid, input_bits_value2, yInitial)
+node _GEN_14 : bv<1> = or(input_valid, busy)
+node _GEN_15 : bv<4> = ite(busy, _GEN_0, _GEN_10)
+node _GEN_16 : bv<4> = ite(busy, _GEN_1, _GEN_11)
+output _GEN_17_invalid.en : bv<1> = not(busy)
+node _GEN_17 : bv<4> = ite(not(busy), _GEN_17_invalid, _GEN_4)
+output _GEN_18_invalid.en : bv<1> = not(busy)
+node _GEN_18 : bv<4> = ite(not(busy), _GEN_18_invalid, _GEN_5)
+output _GEN_19_invalid.en : bv<1> = not(busy)
+node _GEN_19 : bv<4> = ite(not(busy), _GEN_19_invalid, _GEN_6)
+node _GEN_20 : bv<1> = ite(busy, _GEN_7, resultValid)
+node _GEN_21 : bv<1> = ite(busy, _GEN_8, _GEN_14)
+node _GEN_22 : bv<1> = ite(busy, _input_ready_T, _GEN_9)
+node _GEN_23 : bv<4> = ite(busy, xInitial, _GEN_12)
+node _GEN_24 : bv<4> = ite(busy, yInitial, _GEN_13)
+node _T_5 : bv<1> = not(busy)
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+output input_ready : bv<1> = ite(busy, _input_ready_T, _GEN_9)
+output output_valid : bv<1> = resultValid
+output output_bits_value1 : bv<4> = ite(not(busy), _GEN_18_invalid, _GEN_5)
+output output_bits_value2 : bv<4> = ite(not(busy), _GEN_19_invalid, _GEN_6)
+output output_bits_gcd : bv<4> = ite(not(busy), _GEN_17_invalid, _GEN_4)
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+bad just2Bad0_ : bv<1> = and(triggered_0_, and(eq(xInitial, xInitial__), eq(yInitial, yInitial__), eq(x, x__), eq(y, y__), eq(busy, busy__), eq(resultValid, resultValid__), eq(baState0_, baState0___)), not(reset))
+state xInitial : bv<4>
+  [next] ite(busy, xInitial, _GEN_12)
+state yInitial : bv<4>
+  [next] ite(busy, yInitial, _GEN_13)
+state x : bv<4>
+  [next] ite(busy, _GEN_0, _GEN_10)
+state y : bv<4>
+  [next] ite(busy, _GEN_1, _GEN_11)
+state busy : bv<1>
+  [next] ite(reset, 1'b0, _GEN_21)
+state resultValid : bv<1>
+  [next] ite(reset, 1'b0, _GEN_20)
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)
+state baState0_ : bv<5>
+  [next] ite(reset, 5'b1, ite(eq(baState0_, 5'b0), ite(1'b1, 5'b0, 5'b10001), ite(eq(baState0_, 5'b101), ite(ite(_T_5, 1'b0, 1'b1), 5'b110, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1010), ite(ite(_T_5, 1'b0, 1'b1), 5'b1011, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1110), ite(ite(_T_5, 1'b0, 1'b1), 5'b1111, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1), ite(ite(busy, 1'b1, 1'b0), 5'b10, ite(ite(busy, 1'b0, 1'b1), 5'b1, 5'b10001)), ite(eq(baState0_, 5'b110), ite(ite(_T_5, 1'b0, 1'b1), 5'b111, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1001), ite(ite(_T_5, 1'b0, 1'b1), 5'b1010, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1101), ite(ite(_T_5, 1'b0, 1'b1), 5'b1110, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b10), ite(ite(_T_5, 1'b0, 1'b1), 5'b11, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1100), ite(ite(_T_5, 1'b0, 1'b1), 5'b1101, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b111), ite(ite(_T_5, 1'b0, 1'b1), 5'b1000, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b11), ite(ite(_T_5, 1'b0, 1'b1), 5'b100, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b10000), ite(ite(_T_5, 1'b0, 1'b1), 5'b0, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1011), ite(ite(_T_5, 1'b0, 1'b1), 5'b1100, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1000), ite(ite(_T_5, 1'b0, 1'b1), 5'b1001, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b100), ite(ite(_T_5, 1'b0, 1'b1), 5'b101, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), ite(eq(baState0_, 5'b1111), ite(ite(_T_5, 1'b0, 1'b1), 5'b10000, ite(ite(busy, ite(_T_5, 1'b1, 1'b0), 1'b0), 5'b10, ite(ite(busy, 1'b0, ite(_T_5, 1'b1, 1'b0)), 5'b1, 5'b10001))), 5'b10001))))))))))))))))))
+state triggered_0_ : bv<1>
+  [init] 1'b0
+  [next] and(or(triggered_0_, and(eq(baState0_, 5'b0), seen_0_)), not(reset))
+state seen_0_ : bv<1>
+  [init] 1'b0
+  [next] and(or(and(eq(xInitial, xInitial__), eq(yInitial, yInitial__), eq(x, x__), eq(y, y__), eq(busy, busy__), eq(resultValid, resultValid__), eq(baState0_, baState0___)), seen_0_), not(reset))
+state xInitial__ : bv<4>
+  [next] xInitial__
+state yInitial__ : bv<4>
+  [next] yInitial__
+state x__ : bv<4>
+  [next] x__
+state y__ : bv<4>
+  [next] y__
+state busy__ : bv<1>
+  [next] busy__
+state resultValid__ : bv<1>
+  [next] resultValid__
+state baState0___ : bv<5>
+  [next] baState0___

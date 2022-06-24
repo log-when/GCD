@@ -1,0 +1,29 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly GCD.DecoupledGcdSpec, Some(5dc68e50-14da-4221-bccb-1d693ab17c56), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/merlin/Documents/Paper/GCD/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDecoupledGcdSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDecoupledGcd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should pass *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chiseltest.formal.FailedBoundedCheckException: [DecoupledGcdProp1] found an assertion violation 19 steps after reset![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.FailedBoundedCheckException$.apply(Formal.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.backends.Maltese$.bmc(Maltese.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.executeOp(Formal.scala:84)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.$anonfun$verify$2(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.$anonfun$verify$2$adapted(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foreach(List.scala:431)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.verify(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal.verify(Formal.scala:37)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal.verify$(Formal.scala:35)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at GCD.DecoupledGcdSpec.verify(GCDTest.scala:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 41 seconds, 10 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	GCD.DecoupledGcdSpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 42 s, completed 2022年6月24日 上午10:05:13[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -1,0 +1,393 @@
+2022.06.20 21:30:50 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/merlin/Documents/Paper/GCD/.metals/lsp.trace.json or /home/merlin/.cache/metals/lsp.trace.json
+2022.06.20 21:30:51 INFO  logging to file /home/merlin/Documents/Paper/GCD/.metals/metals.log
+2022.06.20 21:30:51 INFO  Started: Metals version 0.11.6 in workspace '/home/merlin/Documents/Paper/GCD' for client Visual Studio Code 1.67.2.
+2022.06.20 21:30:51 INFO  time: initialize in 0.46s
+2022.06.20 21:30:51 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.20 21:30:51 WARN  Build server is not auto-connectable.
+2022.06.20 21:30:53 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/empty/Add.scala
+2022.06.20 21:30:55 INFO  no build target found for /home/merlin/Documents/Paper/GCD/src/main/scala/empty/Add.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.20 21:30:56 INFO  time: code lens generation in 1.96s
+2022.06.20 21:30:56 INFO  time: code lens generation in 2.57s
+2022.06.20 21:30:58 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/empty/Add.scala
+2022.06.20 21:31:13 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/empty/Add.scala
+2022.06.20 21:31:24 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/Add.scala
+2022.06.20 21:31:32 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 21:32:37 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/empty/AddTester.scala
+2022.06.20 21:32:51 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/empty/GCDTest.scala
+2022.06.20 21:34:52 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:34:54 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:35:13 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:35:48 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:36:02 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:36:17 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:36:26 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:37:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:37:12 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+6月 20, 2022 9:39:30 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+严重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 37 is not a valid line number, allowed [0..25]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 15 more
+
+2022.06.20 21:39:31 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:40:11 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:41:05 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:13 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:45 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:47 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:47 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:48 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:46:51 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:11 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:21 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:23 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:39 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:47 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 21:48:49 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:48:54 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:50:50 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 21:51:05 WARN  no build target for: /home/merlin/Documents/Paper/GCD/build.sbt
+2022.06.20 21:53:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/build.sbt
+2022.06.20 21:54:18 WARN  no build target for: /home/merlin/Documents/Paper/GCD/build.sbt
+2022.06.20 21:54:18 INFO  skipping build import with status 'Dismissed'
+2022.06.20 21:55:18 WARN  no build target for: /home/merlin/Documents/Paper/GCD/build.sbt
+2022.06.20 22:03:15 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:10:58 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:12:49 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:13:38 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:13:58 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:15:52 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:16:23 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:17:04 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:17:08 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:17:20 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:20:10 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:22:23 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:23:10 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:23:13 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:23:27 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:23:47 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:23:57 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:24:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:24:09 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:24:09 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:24:12 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:24:19 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:24:34 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:24:46 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:25:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:25:06 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:25:49 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:26:10 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:26:29 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:29:20 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+6月 20, 2022 10:39:36 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2022.06.20 22:51:25 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:51:38 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:52:04 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:52:39 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:52:46 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.20 22:52:50 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.20 22:54:08 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:21:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.21 10:21:21 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:21:35 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:21:55 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:22:39 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:22:55 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:23:36 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:23:55 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:24:22 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:36:50 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:36:55 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:37:08 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:39:48 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.21 10:39:50 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:42:33 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.21 10:43:13 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:43:40 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:43:48 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:44:09 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:44:19 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:44:28 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:44:39 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:45:03 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:46:27 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:47:07 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:47:14 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.21 10:47:28 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:48:18 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:48:35 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 10:48:46 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 13:30:25 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 13:31:11 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 13:31:27 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 13:31:36 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.21 20:10:32 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:22:23 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:30 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+6月 22, 2022 8:23:33 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2022.06.24 09:58:34 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/merlin/Documents/Paper/GCD/.metals/lsp.trace.json or /home/merlin/.cache/metals/lsp.trace.json
+2022.06.24 09:58:35 INFO  logging to file /home/merlin/Documents/Paper/GCD/.metals/metals.log
+2022.06.24 09:58:35 INFO  Started: Metals version 0.11.6 in workspace '/home/merlin/Documents/Paper/GCD' for client Visual Studio Code 1.68.1.
+2022.06.24 09:58:35 INFO  time: initialize in 0.65s
+2022.06.24 09:58:35 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.24 09:58:35 WARN  Build server is not auto-connectable.
+2022.06.24 09:58:36 INFO  skipping build import with status 'Requested'
+2022.06.24 09:58:42 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 09:58:44 INFO  no build target found for /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.24 09:58:45 INFO  time: code lens generation in 2.62s
+6月 24, 2022 10:01:43 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 49
+2022.06.24 10:01:51 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 10:02:01 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 10:02:31 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 10:02:34 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:02:39 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:04:05 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:04:29 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:09:10 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/merlin/Documents/Paper/GCD/.metals/lsp.trace.json or /home/merlin/.cache/metals/lsp.trace.json
+2022.06.24 10:09:10 INFO  logging to file /home/merlin/Documents/Paper/GCD/.metals/metals.log
+2022.06.24 10:09:10 INFO  Started: Metals version 0.11.6 in workspace '/home/merlin/Documents/Paper/GCD' for client Visual Studio Code 1.68.1.
+2022.06.24 10:09:11 INFO  time: initialize in 0.72s
+2022.06.24 10:09:11 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.24 10:09:11 WARN  Build server is not auto-connectable.
+2022.06.24 10:09:12 INFO  skipping build import with status 'Requested'
+2022.06.24 10:09:14 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:09:18 INFO  no build target found for /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.24 10:09:21 INFO  time: code lens generation in 6.21s
+2022.06.24 10:10:47 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:11:06 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:12:06 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 10:12:14 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+6月 24, 2022 10:15:57 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 76
+2022.06.24 10:15:59 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala
+2022.06.24 10:16:15 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 10:16:25 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 14:03:00 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+2022.06.24 14:11:11 WARN  no build target for: /home/merlin/Documents/Paper/GCD/src/test/scala/GCD/GCDTest.scala
+6月 24, 2022 8:04:02 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace

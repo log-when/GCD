@@ -1,0 +1,24 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(GCD.DecoupledGcdSpec, org.scalatest.tools.Framework$$anon$1@75adb30d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDecoupledGcdSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDecoupledGcd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should pass *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chiseltest.formal.FailedBoundedCheckException: [DecoupledGcdProp1] found an assertion violation 19 steps after reset![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.FailedBoundedCheckException$.apply(Formal.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.backends.Maltese$.bmc(Maltese.scala:88)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.executeOp(Formal.scala:84)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.$anonfun$verify$2(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.$anonfun$verify$2$adapted(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foreach(List.scala:431)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal$.verify(Formal.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal.verify(Formal.scala:37)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chiseltest.formal.Formal.verify$(Formal.scala:35)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at GCD.DecoupledGcdSpec.verify(GCDTest.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 490 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	GCD.DecoupledGcdSpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m

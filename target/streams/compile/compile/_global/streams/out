@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala:42:3: not found: value svaSeqAnno[0m
+[0m[[0m[31merror[0m] [0m[0m  svaSeqAnno.makeSVAAnno(this.reset, ap(busy) |-> ###(1,1) ap(!busy))[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala:42:38: not found: value ap[0m
+[0m[[0m[31merror[0m] [0m[0m  svaSeqAnno.makeSVAAnno(this.reset, ap(busy) |-> ###(1,1) ap(!busy))[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/merlin/Documents/Paper/GCD/src/main/scala/GCD/GCD.scala:42:51: not found: value ###[0m
+[0m[[0m[31merror[0m] [0m[0m  svaSeqAnno.makeSVAAnno(this.reset, ap(busy) |-> ###(1,1) ap(!busy))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
